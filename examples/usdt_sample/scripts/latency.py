@@ -114,5 +114,5 @@ print("%-18s %-10s %-32s %-32s %16s %16s %16s" % ("time(s)", "id", "input", "out
 
 # Output latency events
 bpf_ctx["operation_event"].open_perf_buffer(print_event)
-while 1:
+while True:
     bpf_ctx.perf_buffer_poll()

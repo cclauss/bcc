@@ -66,7 +66,7 @@ b.attach_uretprobe(name="c", sym="gethostbyname2", fn_name="do_return")
 print("%-9s %-6s %-12s %6s %s" % ("TIME", "PID", "COMM", "LATms", "HOST"))
 
 # format output
-while 1:
+while True:
     try:
         (task, pid, cpu, flags, ts, msg) = b.trace_fields()
     except ValueError:

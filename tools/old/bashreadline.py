@@ -35,7 +35,7 @@ b.attach_uretprobe(name="/bin/bash", sym="readline", fn_name="printret")
 print("%-9s %-6s %s" % ("TIME", "PID", "COMMAND"))
 
 # format output
-while 1:
+while True:
     try:
         (task, pid, cpu, flags, ts, msg) = b.trace_fields()
     except ValueError:

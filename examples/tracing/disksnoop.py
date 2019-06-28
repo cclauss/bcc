@@ -52,7 +52,7 @@ b.attach_kprobe(event="blk_account_io_completion", fn_name="trace_completion")
 print("%-18s %-2s %-7s %8s" % ("TIME(s)", "T", "BYTES", "LAT(ms)"))
 
 # format output
-while 1:
+while True:
 	try:
 		(task, pid, cpu, flags, ts, msg) = b.trace_fields()
 		(bytes_s, bflags_s, us_s) = msg.split()

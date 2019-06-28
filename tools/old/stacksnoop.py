@@ -115,7 +115,7 @@ else:
     print("%-18s %s" % ("TIME(s)", "STACK"))
 
 # format output
-while 1:
+while True:
     (task, pid, cpu, flags, ts, msg) = b.trace_fields()
     if msg != "":
         (reg, addr) = msg.split(" ")

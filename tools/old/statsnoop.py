@@ -94,7 +94,7 @@ print("%-6s %-16s %4s %3s %s" % ("PID", "COMM", "FD", "ERR", "PATH"))
 start_ts = 0
 
 # format output
-while 1:
+while True:
     (task, pid, cpu, flags, ts, msg) = b.trace_fields()
     (ret_s, filename) = msg.split(" ", 1)
 

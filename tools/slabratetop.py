@@ -110,7 +110,7 @@ print('Tracing... Output every %d secs. Hit Ctrl-C to end' % interval)
 
 # output
 exiting = 0
-while 1:
+while True:
     try:
         sleep(interval)
     except KeyboardInterrupt:

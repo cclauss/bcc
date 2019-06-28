@@ -58,7 +58,7 @@ TRACEPOINT_PROBE(kvm, kvm_hypercall) {
 print("%-18s %-16s %-6s %s" % ("TIME(s)", "COMM", "PID", "EVENT"))
 
 # format output
-while 1:
+while True:
     try:
         (task, pid, cpu, flags, ts, msg) = b.trace_fields()
     except ValueError:

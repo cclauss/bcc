@@ -50,7 +50,7 @@ def print_event(cpu, data, size):
 
 # loop with callback to print_event
 b["events"].open_perf_buffer(print_event)
-while 1:
+while True:
     try:
         b.perf_buffer_poll()
     except KeyboardInterrupt:

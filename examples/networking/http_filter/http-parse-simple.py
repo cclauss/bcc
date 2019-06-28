@@ -80,7 +80,7 @@ sock = socket.fromfd(socket_fd,socket.PF_PACKET,socket.SOCK_RAW,socket.IPPROTO_I
 #set it as blocking socket
 sock.setblocking(True)
 
-while 1:
+while True:
   #retrieve raw packet from socket
   packet_str = os.read(socket_fd,2048)
 

@@ -109,14 +109,14 @@ class Probe:
 
         # self.event and self.func_name need to be accessible
         self.event = self.func[0:left]
-        self.func_name = self.event + ("_entry" if self.is_entry else "_exit")
+        self.__name__ = self.event + ("_entry" if self.is_entry else "_exit")
         func_sig = "struct pt_regs *ctx"
 
         # assume theres something in there, no guarantee its well formed
         if right > left + 1 and self.is_entry:
             func_sig += ", " + self.func[left + 1:right]
 
-        return "int %s(%s)" % (self.func_name, func_sig)
+        return "int %s(%s)" % (self.__name__, func_sig)
 
     def _get_entry_logic(self):
         # there is at least one tup(pred, place) for this function
@@ -302,10 +302,10 @@ class Probe:
     def attach(self, bpf):
         if self.is_entry:
             bpf.attach_kprobe(event=self.event,
-                    fn_name=self.func_name)
+                    fn_name=self.__name__)
         else:
             bpf.attach_kretprobe(event=self.event,
-                    fn_name=self.func_name)
+                    fn_name=self.__name__)
 
 
 class Tool:

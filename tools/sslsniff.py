@@ -215,7 +215,7 @@ def print_event(cpu, data, size, rw, evt):
 
 b["perf_SSL_write"].open_perf_buffer(print_event_write)
 b["perf_SSL_read"].open_perf_buffer(print_event_read)
-while 1:
+while True:
     try:
         b.perf_buffer_poll()
     except KeyboardInterrupt:

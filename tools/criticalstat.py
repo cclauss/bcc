@@ -314,7 +314,7 @@ b["events"].open_perf_buffer(print_event, page_cnt=256)
 print("Finding critical section with {} disabled for > {}us".format(
     ('preempt' if preemptoff else 'IRQ'), args.duration))
 
-while 1:
+while True:
     try:
         b.perf_buffer_poll()
     except KeyboardInterrupt:

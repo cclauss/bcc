@@ -91,7 +91,7 @@ b.attach_xdp(out_if, out_fn, flags)
 rxcnt = b.get_table("rxcnt")
 prev = 0
 print("Printing redirected packets, hit CTRL+C to stop")
-while 1:
+while True:
     try:
         val = rxcnt.sum(0).value
         if val:

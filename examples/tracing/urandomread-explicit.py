@@ -45,7 +45,7 @@ b.attach_tracepoint(tp="random:urandom_read", fn_name="printarg")
 print("%-18s %-16s %-6s %s" % ("TIME(s)", "COMM", "PID", "GOTBITS"))
 
 # format output
-while 1:
+while True:
     try:
         (task, pid, cpu, flags, ts, msg) = b.trace_fields()
     except ValueError:

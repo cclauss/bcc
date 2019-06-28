@@ -174,7 +174,7 @@ def sort_fn(counts):
 
 # output
 exiting = 0
-while 1:
+while True:
     try:
         sleep(interval)
     except KeyboardInterrupt:

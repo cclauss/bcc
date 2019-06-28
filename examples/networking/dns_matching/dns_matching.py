@@ -77,7 +77,7 @@ socket_fd = function_dns_matching.sock
 fl = fcntl.fcntl(socket_fd, fcntl.F_GETFL)
 fcntl.fcntl(socket_fd, fcntl.F_SETFL, fl & (~os.O_NONBLOCK))
 
-while 1:
+while True:
   #retrieve raw packet from socket
   try:
     packet_str = os.read(socket_fd, 2048)

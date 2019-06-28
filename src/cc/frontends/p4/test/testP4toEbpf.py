@@ -32,8 +32,7 @@ def is_root():
 def main():
     testpath = "testprograms"
     destFolder = "testoutputs"
-    files = os.listdir(testpath)
-    files.sort()
+    files = sorted(os.listdir(testpath))
     filesDone = 0
     errors = 0
 

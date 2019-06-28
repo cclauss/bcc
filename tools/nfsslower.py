@@ -305,7 +305,7 @@ else:
                                                     "FILENAME"))
 
 b["events"].open_perf_buffer(print_event, page_cnt=64)
-while 1:
+while True:
     try:
         b.perf_buffer_poll()
     except KeyboardInterrupt:

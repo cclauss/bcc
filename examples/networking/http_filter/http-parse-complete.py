@@ -24,6 +24,7 @@ import os
 import struct
 import binascii
 import time
+from functools import reduce
 
 CLEANUP_N_PACKETS  = 50       #run cleanup every CLEANUP_N_PACKETS packets received
 MAX_URL_STRING_LEN = 8192     #max url string len (usually 8K)
@@ -144,7 +145,7 @@ packet_count = 0
 #when I find \r\n in a next pkt, append and print all the url
 local_dictionary = {}
 
-while 1:
+while True:
   #retrieve raw packet from socket
   packet_str = os.read(socket_fd,4096) #set packet length to max packet length on the interface
   packet_count += 1

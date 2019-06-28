@@ -259,7 +259,7 @@ if args.lossprobe:
 print("Tracing retransmits ... Hit Ctrl-C to end")
 if args.count:
     try:
-        while 1:
+        while True:
             sleep(99999999)
     except BaseException:
         pass
@@ -276,7 +276,7 @@ else:
         "LADDR:LPORT", "T", "RADDR:RPORT", "STATE"))
     b["ipv4_events"].open_perf_buffer(print_ipv4_event)
     b["ipv6_events"].open_perf_buffer(print_ipv6_event)
-    while 1:
+    while True:
         try:
             b.perf_buffer_poll()
         except KeyboardInterrupt:

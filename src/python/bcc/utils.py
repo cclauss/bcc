@@ -91,8 +91,8 @@ def _assert_is_bytes(arg):
     if arg is None:
         return arg
     if _strict_bytes:
-        assert type(arg) is bytes, "not a bytes object: %r" % arg
-    elif type(arg) is not bytes:
+        assert isinstance(arg, bytes), "not a bytes object: %r" % arg
+    elif not isinstance(arg, bytes):
         warnings.warn("not a bytes object: %r" % arg, DeprecationWarning, 2)
         return ArgString(arg).__bytes__()
     return arg

@@ -26,6 +26,6 @@ void kprobe__sys_sync(void *ctx) {
 print("%-18s %s" % ("TIME(s)", "CALL"))
 
 # format output
-while 1:
+while True:
     (task, pid, cpu, flags, ts, msg) = b.trace_fields()
     print("%-18.9f %s" % (ts, msg))

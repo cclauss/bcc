@@ -169,7 +169,7 @@ else:
 dropcnt = b.get_table("dropcnt")
 prev = [0] * 256
 print("Printing drops per IP protocol-number, hit CTRL+C to stop")
-while 1:
+while True:
     try:
         for k in dropcnt.keys():
             val = dropcnt.sum(k).value

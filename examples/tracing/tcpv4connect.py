@@ -86,7 +86,7 @@ def inet_ntoa(addr):
 	return dq
 
 # filter and format output
-while 1:
+while True:
 	# Read messages from kernel pipe
 	try:
 	    (task, pid, cpu, flags, ts, msg) = b.trace_fields()

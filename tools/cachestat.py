@@ -107,7 +107,7 @@ print("%8s %8s %8s %8s %12s %10s" %
 
 loop = 0
 exiting = 0
-while 1:
+while True:
     if count > 0:
         loop += 1
         if loop > count:

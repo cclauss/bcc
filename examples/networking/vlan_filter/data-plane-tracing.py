@@ -100,7 +100,7 @@ except:
 
 print("| Timestamp | Host Name | Host IP | IP Version | Source Host IP | Dest Host IP | Source Host Port | Dest Host Port | VNI | Source VM MAC | Dest VM MAC | VLAN ID | Source VM IP | Dest VM IP | Protocol | Source VM Port | Dest VM Port | Packet Length |")
 
-while 1:
+while True:
     #retrieve raw packet from socket
     packet_str = os.read(socket_fd, 2048)
     

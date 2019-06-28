@@ -174,7 +174,7 @@ def handle_loop(stdscr, args):
 
     exiting = 0
 
-    while 1:
+    while True:
         s = stdscr.getch()
         if s == ord('q'):
             exiting = 1

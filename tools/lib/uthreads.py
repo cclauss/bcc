@@ -127,7 +127,7 @@ def print_event(cpu, data, size):
         time.time() - start_ts, tid, event.type, name))
 
 bpf["threads"].open_perf_buffer(print_event)
-while 1:
+while True:
     try:
         bpf.perf_buffer_poll()
     except KeyboardInterrupt:

@@ -120,7 +120,7 @@ def inet_ntoa(addr):
     return dq
 
 # format output
-while 1:
+while True:
     (task, pid, cpu, flags, ts, msg) = b.trace_fields()
     (ip_s, raddr_hs, laddr_hs, lport_s) = msg.split(" ")
 

@@ -95,7 +95,7 @@ print("%-8s %-6s %-16s %-7s %s" % ("TIME", "PID", "COMM", "AGE(s)", "FILE"))
 start_ts = 0
 
 # format output
-while 1:
+while True:
     (task, pid, cpu, flags, ts, msg) = b.trace_fields()
     (delta, filename) = msg.split(" ", 1)
 

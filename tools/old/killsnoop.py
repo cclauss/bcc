@@ -90,7 +90,7 @@ print("%-6s %-16s %-4s %-6s %s" % ("PID", "COMM", "SIG", "TPID", "RESULT"))
 start_ts = 0
 
 # format output
-while 1:
+while True:
     (task, pid, cpu, flags, ts, msg) = b.trace_fields()
     (tpid_s, sig_s, ret_s) = msg.split(" ")
 

@@ -190,7 +190,7 @@ with open(diskstats) as stats:
 
 # output
 exiting = 0
-while 1:
+while True:
     try:
         sleep(interval)
     except KeyboardInterrupt:

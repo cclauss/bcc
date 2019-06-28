@@ -195,7 +195,7 @@ if __name__ == "__main__":
               ("PID", "COMM", "PROTO", "BACKLOG", "PORT", "ADDR"))
 
     # Read events
-    while 1:
+    while True:
         try:
             b.perf_buffer_poll()
         except KeyboardInterrupt:
